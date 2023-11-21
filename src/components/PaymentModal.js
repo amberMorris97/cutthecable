@@ -54,6 +54,20 @@ const PaymentModal = ({ updateParentValue,data }) => {
                 <p className="SignInTitle">Select Payment Method</p>
                 <Button
           variant="contained"
+          onClick={async () => {
+            const datares = await createCheckout(
+                        email,
+                        data.metadata._id,
+                        data.ditem.name,
+                        data.metadata.price,
+                        data.ditem.company,
+                        data.metadata.pricedesc,
+                        data.ditem.category,
+                        data.sValidities,
+                        'stripe'
+                      );
+                      window.location.href = datares.data;
+                }}
           className="SignUpButton"
           style={{ textTransform: "none" }}
         >
