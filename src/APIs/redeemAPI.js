@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const axiosAPI = axios.create({
-    // baseURL: "https://nocableneeded-auth.onrender.com/",
-    baseURL: "http://localhost:4242",
+    //baseURL: "https://nocableneeded-auth.onrender.com/",
+    baseURL: "http://172.16.16.6:4242",
 });
 
 export const createCode = async (email, code, validity, itemID) => {
