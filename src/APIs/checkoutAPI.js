@@ -2,7 +2,7 @@ import axios from "axios";
 
 const axiosAPI = axios.create({
     //baseURL: "https://nocableneeded-auth.onrender.com/",
-    baseURL: "http://172.16.16.6:4242",
+    baseURL: "https://1738api.nocableneeded.net/",
 });
 
 export const createCheckout = async (email, id, name, price, company, description, category, validity,type) => {
