@@ -70,7 +70,7 @@ export const redeemFreeTrial = async (email, code) => {
             code: code,
         });
     } catch (err) {
-        console.log("Error signing up", err);
+        console.log(err.response.data.message);
     }
 };
 

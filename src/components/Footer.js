@@ -23,7 +23,7 @@ function Footer() {
             <div className="gridItem">
               <div className="gridItem">
                 <p className="FooterHeading">Email</p>
-                <p className="FooterSubHeading">a2z.ebiz@verizon.net</p>
+                <p className="FooterSubHeading">cutthecable@techie.com</p>
               </div>
             </div>
           </Grid>
