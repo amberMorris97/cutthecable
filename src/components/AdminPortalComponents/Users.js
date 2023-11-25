@@ -88,14 +88,14 @@ const Users = () => {
                   Activate
                 </Button>
               )}
-              {/* <Button
+              <Button
                 variant="contained"
                 color="secondary"
                 style={customButtonStyle}
-                onClick={() => handleButtonClick(params.id,'changepwd')}
+                onClick={() => handleButtonClick(params.id,'deleteuser')}
               >
-                Change Password
-              </Button> */}
+                Delete
+              </Button>
             </div>
           );
           
@@ -169,7 +169,7 @@ width: 70%;
     font-size:35px;
 }
 .table{
-    width: 80%;
+    width: 100%;
     height: 600px;
 }
 .CardsDisplay{
