@@ -12,6 +12,7 @@ import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import RemoveDoneIcon from '@mui/icons-material/RemoveDone';
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
+import RedeemModal from './RedeemModal';
 
 
 
@@ -29,8 +30,15 @@ const RedeemCode = () => {
   const [updatedData, setUpdatedData] = useState(0);
   const [openSnackbar, setOpenSnackbar] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState("");
+  const [SignUpOverlay, setSignUpOverlay] = useState(false);
   const [snackbarSeverity, setSnackbarSeverity] = useState("error");
-
+  const [dataToSend, setDataToSend] = useState('');
+  function RedeemClicked(rcode) {
+    const dataToConsolidate = { rcode: rcode };
+    console.log(dataToConsolidate);
+    setDataToSend(dataToConsolidate);
+    setSignUpOverlay(!SignUpOverlay);
+  }
 
   const email = localStorage.getItem("Email");
   useEffect(() => {
@@ -109,7 +117,7 @@ const RedeemCode = () => {
           variant="contained"
           color="primary"
           disabled={params.row.status === "active"} // Disable the button for rows with status "active"
-          onClick={() => handleRedeemClick(params.row)}
+          onClick={async () => { RedeemClicked(params.row)}}
         >
           Redeem
         </Button>
@@ -119,7 +127,7 @@ const RedeemCode = () => {
 
   return (
     <Wrapper>
-
+      {SignUpOverlay && <RedeemModal data={dataToSend} updateParentValue={RedeemClicked} />}
       <Snackbar
         open={openSnackbar}
         autoHideDuration={6000}
@@ -172,7 +180,7 @@ const RedeemCode = () => {
       {!noData &&
         <>
           <p className="TitleText">Subscription Code Status</p>
-
+{/* 
           <div className="statusHolder">
             {activeSubscription != null ? <CheckCircleOutlineIcon className="CheckIcon" /> : <RemoveDoneIcon className="CheckIcon2" />}
             {activeSubscription != null ? <p>Current Code: {activeSubscription.subscription_code}</p> : <></>}
@@ -188,7 +196,7 @@ const RedeemCode = () => {
             ) : (
               <></>
             )}
-          </div>
+          </div> */}
 
           <div className="RedeemCode">
             <div className="InputHolder">
