@@ -22,7 +22,7 @@ function Footer() {
           <Grid  item  sm={2} xs={2}>
             <div className="gridItem">
             <div class="gridItem">
-                <p class="FooterHeading">Email</p>
+                <p class="FooterHeading">Email2</p>
                 <a href="mailto:cutthecable@techie.com" class="FooterSubHeading">cutthecable@techie.com</a>
             </div>  
             </div>
