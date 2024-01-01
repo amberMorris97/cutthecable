@@ -21,10 +21,10 @@ function Footer() {
         <Grid item container gap={10} spacing={0} className="FooterUpperGrid">
           <Grid  item  sm={2} xs={2}>
             <div className="gridItem">
-              <div className="gridItem">
-                <p className="FooterHeading">Email</p>
-                <p className="FooterSubHeading">cutthecable@techie.com</p>
-              </div>
+            <div class="gridItem">
+                <p class="FooterHeading">Email</p>
+                <a href="mailto:cutthecable@techie.com" class="FooterSubHeading">cutthecable@techie.com</a>
+            </div>  
             </div>
           </Grid>
 
@@ -54,7 +54,7 @@ function Footer() {
           <Grid item container gap={2} spacing={0} className="FooterLowerGrid">
             <Grid  item  sm={3} xs={11.5}>
               <div className="gridItem2">
-                <p className="LoverGridText1">Copyright 2020 ©. cutthecable</p>
+                <p className="LoverGridText1">Copyright 2024 ©. cutthecable</p>
               </div>
             </Grid>
 
