@@ -97,7 +97,8 @@ export const resetPassword = async (email, verificationToken, password) => {
 
 export const verifyToken = async (email, verificationToken) => {
     try {
-        const baseUrl = "https://nocableneeded-auth.onrender.com/auth/api/verify";
+        const baseUrl="https://1738api.nocableneeded.net/auth/api/verify";
+        //const baseUrl = "https://nocableneeded-auth.onrender.com/auth/api/verify";
         const queryParams = new URLSearchParams({
             email: email,
             verify_token: verificationToken,
