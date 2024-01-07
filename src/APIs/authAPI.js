@@ -97,21 +97,29 @@ export const resetPassword = async (email, verificationToken, password) => {
 
 export const verifyToken = async (email, verificationToken) => {
     try {
-        const baseUrl="https://1738api.nocableneeded.net/auth/api/verify";
-        //const baseUrl = "https://nocableneeded-auth.onrender.com/auth/api/verify";
-        const queryParams = new URLSearchParams({
+        return axiosAPI.post("/auth/verify", {
             email: email,
-            verify_token: verificationToken,
+            verify_token: verificationToken
         });
-
-        const url = `${baseUrl}?${queryParams.toString()}`;
-
-        console.log(url); // This will log the correct URL for debugging purposes
-
-        return axiosAPI.get(url);
     } catch (err) {
-        console.log("Error Validating User: ", err);
+        console.log("Error resetting password : ", err);
     }
+    // try {
+    //     const baseUrl="https://1738api.nocableneeded.net/auth/api/verify";
+    //     //const baseUrl = "https://nocableneeded-auth.onrender.com/auth/api/verify";
+    //     const queryParams = new URLSearchParams({
+    //         email: email,
+    //         verify_token: verificationToken,
+    //     });
+
+    //     const url = `${baseUrl}?${queryParams.toString()}`;
+
+    //     console.log(url); // This will log the correct URL for debugging purposes
+
+    //     return axiosAPI.get(url);
+    // } catch (err) {
+    //     console.log("Error Validating User: ", err);
+    // }
 };
 
 // const approvalLink = `https://nocableneeded-auth.onrender.com/auth/api/verify?email=${encodeURIComponent(
