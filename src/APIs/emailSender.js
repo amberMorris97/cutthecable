@@ -6,14 +6,14 @@ app.use(express.json());
 const transporter = nodemailer.createTransport({
   service: 'gmail', // or your email service
   auth: {
-    user: 'admin@galico.io', // your email
-    pass: 'grxb dmbg hgsh eawu' // your email password
+    user: 'cutthecable@techie.com ', // your email
+    pass: 'DIIYJDCY5NIJ3CYPPL67' // your email password
   }
 });
 
 app.post('/send-email', (req, res) => {
   const { to, subject, text } = req.body;
-  const mailOptions = { from: 'admin@galico.io', to, subject, text };
+  const mailOptions = { from: 'cutthecable@techie.com', to, subject, text };
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
