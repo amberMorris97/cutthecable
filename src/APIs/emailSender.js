@@ -4,10 +4,12 @@ const app = express();
 app.use(express.json());
 
 const transporter = nodemailer.createTransport({
-  service: 'gmail', // or your email service
+  host: "smtp.mail.com", // Replace with the SMTP server for Mail.com
+  port: 587, // Common port for SMTP. Use 465 for SSL.
+  secure: false, // true for 465, false for other ports
   auth: {
     user: 'cutthecable@techie.com ', // your email
-    pass: 'DIIYJDCY5NIJ3CYPPL67' // your email password
+    pass: process.env.EMAIL_PASSWORD // your email password
   }
 });
 
