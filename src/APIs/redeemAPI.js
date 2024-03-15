@@ -2,7 +2,8 @@ import axios from "axios";
 
 const axiosAPI = axios.create({
     //baseURL: "https://nocableneeded-auth.onrender.com/",
-    baseURL: "https://1738api.nocableneeded.net/",
+    // baseURL: "1738api.cutthecable.org",
+    baseURL: "https://1738api.cutthecable.org",
 });
 
 export const createCode = async (email, code, validity, itemID) => {

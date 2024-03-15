@@ -2,7 +2,9 @@ import axios from "axios";
 
 const axiosAPI = axios.create({
     //baseURL: "https://nocableneeded-auth.onrender.com/",
-    baseURL: "https://1738api.nocableneeded.net/",
+    // baseURL: "https://1738api.nocableneeded.net/",
+    // baseURL: "http://localhost:4242",
+    baseURL: "https://1738api.cutthecable.org",
 });
 
 export const signupUser = async (email, password, username, profile_picture) => {
