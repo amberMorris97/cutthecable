@@ -276,7 +276,7 @@ const SignInGeneralDeatils = ({ updateSubParentValue }) => {
                 </div>
               </div>
             </Grid>
-            <GoogleOAuthProvider clientId="282250982997-oq8rjm50mp82je5i8nd3o17dc77fs6fl.apps.googleusercontent.com">
+            <GoogleOAuthProvider clientId="815904026808-i4tr0238qthdjqke88ljc1icg5v3fcjb.apps.googleusercontent.com">
               <div>
                 <div className="social">OR</div>
                 <div className="social_auth">
