@@ -29,7 +29,7 @@ const ChangePlan = () => {
     setDataToSend(dataToConsolidate);
     setSignUpOverlay(!SignUpOverlay);
   }
-  
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -92,8 +92,8 @@ const ChangePlan = () => {
         <div className="PlanSelection">
           {data.map((item) => (
             <Package key={item.id}>
-              <h2>{item.name}</h2>
-              <p>{item.description}</p>
+              <h2>Cut The Cable</h2>
+              <p>digital subscription for cutthecable</p>
               <div className="ValiditySelect">
                 <Select
                   value={selectedValidities[item.id] || ""}
@@ -144,7 +144,7 @@ const ChangePlan = () => {
                       setOpenSnackbar(true);
                     } else {
                     SignUpClicked(item, selectedMetadata, selectedValidity)
-                      
+
                     }
                   } else {
                     // If no validity is selected, show an error message or handle it as needed.
@@ -202,7 +202,7 @@ const Wrapper = styled.section`
     }
     .PlanSelection {
       width: 90%;
-      flex-direction: column; 
+      flex-direction: column;
       display: grid;
       padding-left: 0px;
       margin-left: 0px;
